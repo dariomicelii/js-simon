@@ -6,6 +6,12 @@ const initialNumbers5 = document.getElementById("initial-numbers5");
 const formWindow = document.getElementById("form-window");
 const initialNumbersWindow = document.getElementById("initial-numbers-window");
 
+const response1 = document.getElementById("response1").value;
+const response2 = document.getElementById("response2").value;
+const response3 = document.getElementById("response3").value;
+const response4 = document.getElementById("response4").value;
+const response5 = document.getElementById("response5").value;
+
 function generateRandom() {
   return Math.floor(Math.random() * 100) + 1;
 }
@@ -33,6 +39,20 @@ console.log(
 const trentaSec = setTimeout(formAppear, 3000);
 
 function formAppear() {
-  initialNumbersWindow.classList("d-none");
-  formWindow.classList("d-block");
+  initialNumbersWindow.classList.add("d-none");
+  formWindow.classList.remove("d-none");
 }
+
+saveResponse1 = response1;
+saveResponse2 = response2;
+saveResponse3 = response3;
+saveResponse4 = response4;
+saveResponse5 = response5;
+
+console.log(
+  saveResponse1,
+  saveResponse2,
+  saveResponse3,
+  saveResponse4,
+  saveResponse5
+);
